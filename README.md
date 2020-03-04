@@ -41,7 +41,7 @@
         - link do cytatu - czarny
     - separator daty z paczki __datetime__ na ``.``
 3. Dodaje komendy:
-    - ``\centerimage[label]{caption}{path/to/image}``
+    - ``\centerimage[label]{path/to/image}{caption}``
     
        Komenda wstawia wycentrowany obraz z podpisem. Ta komenda jest zalecana dla zdjęć kwadratowych i pionowych, ponieważ dopasowuje zdjęcie, aby zajmowało około 30% wysokości kartki.
        
@@ -51,7 +51,7 @@
         W przypadku podania pustego argumentu podpis nie pojawi się,
         - _path_ - jest argumentem wymaganym. Określa ścieżkę do dodawanego pliku graficznego.
 
-    - ``\centerimagewide[label]{caption}{path/to/image}``
+    - ``\centerimagewide[label]{path/to/image}{caption}``
     
        Zaleca się użycie tej komendy, jeśli zdjęcie dodane przez ``\centerimage`` jest zbyt małe lub zbyt szerokie.
        Komenda wstawia wycentrowany obraz z podpisem. Ta komenda dopasowuje zdjęcie, aby zajmowało 70% szerokości kartki.
