@@ -1,4 +1,4 @@
-# PoliBaza - style dla języka LaTeX ułatwiający pisanie sprawozdań i notatek
+# __PoliBaza__ - style dla języka LaTeX ułatwiający pisanie sprawozdań i notatek
 
 ## Zawartość paczki:
 - *poliBase* - styl bazowy, zawierający usprawnienia i nowe komendy ułatwiające pracę z dokumentami na studia
