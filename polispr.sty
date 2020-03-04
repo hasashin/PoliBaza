@@ -1,0 +1,41 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{polispr}[2019/11/11 Kierunkowa paczka do pisania sprawozdań - styl dla sprawozdania]
+
+\RequirePackage{polibase}
+
+% university information
+\def\univ{Politechnika Poznańska}
+\def\faculty{Wydział Informatyki i Telekomunikacji}
+\def\institute{Instytut Informatyki}
+
+%create titlepage with university name and stuff
+\makeatletter
+\renewcommand{\maketitle}{\begin{titlepage}
+    \pagestyle{empty}
+    \pagenumbering{gobble}
+    \begin{center}\small
+        \LARGE\textbf{\MakeUppercase{\univ}}\\
+        \Large\textsc{\faculty}\\
+        \normalsize \institute
+    \end{center}
+    \vspace{3cm}
+    \noindent
+    \begin{center}
+      \LARGE \@author
+    \end{center}
+    \vspace{7cm}
+    \noindent
+    \begin{center}
+        \large Sprawozdanie z zajęć laboratoryjnych:
+    \end{center}
+    \vspace{0.4cm}
+    \begin{center}
+        \Large \textbf{\@title}
+    \end{center}
+    \vspace*{\stretch{6}}
+    \begin{center}
+        \@date
+    \end{center}
+  \end{titlepage}
+}
+

@@ -1,0 +1,17 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{polinote}[2019/11/11 Kierunkowa paczka do pisania sprawozdań - styl dla notatki]
+
+\RequirePackage{polibase}
+
+% creates small head title on top of page with @title, @date and @author
+% draws line between title and document content
+% usage \maketitle
+\renewcommand{\maketitle}{
+    \noindent
+    \LARGE\textbf{\uppercase{\@title}} \hspace{\fill}\large \@author\\
+    \small\@date \\
+    \rule{\textwidth}{0.2pt}
+    \newline
+    \vspace*{2em}
+    \newline
+}

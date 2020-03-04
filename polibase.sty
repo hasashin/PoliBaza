@@ -1,0 +1,164 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{polibase}[2019/11/11 Kierunkowa paczka do pisania sprawozdań - baza]
+
+% polish language support
+\RequirePackage{polski}
+
+% T1 fonts
+\RequirePackage[T1]{fontenc}
+
+% utf8 encoding
+\RequirePackage[utf8]{inputenc}
+
+% bera font
+\RequirePackage{bera}
+
+% modern fonts
+\RequirePackage{lmodern}
+
+% indents first line in new paragraph
+\RequirePackage{indentfirst}
+
+% set margins of every page
+\RequirePackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+
+% provides \allsectionsfont command
+\RequirePackage{sectsty}
+
+% provides support for multi row cells in tabular
+\RequirePackage{multirow}
+
+% for better tables, provides command for lines through only some columns
+\RequirePackage{booktabs}
+
+% enables graphics links
+\RequirePackage{graphicx}
+
+% adds code listings support
+\RequirePackage{listings}
+
+% adds coloring suport
+\RequirePackage{xcolor}
+
+% tweaks for math mode
+\RequirePackage{amsmath}
+
+% provides additional symbols
+\RequirePackage{latexsym}
+
+% enchances enumerators
+% ex.:
+% \begin{enumerate}[a)]
+%   \item foo
+% \end{enumerate}
+\RequirePackage{enumerate}
+
+% provides hyperlinks, hyperreferences and urls
+\RequirePackage{hyperref}
+
+% provides tabular columns setting with:
+% \begin{tabular}{|l|c|r|}
+%    foo & foo & foo\\ 
+% \end{tabular}   
+\RequirePackage{array}
+
+% provides *fancy* header and footer
+\RequirePackage{fancyhdr}
+
+% provides commands for image (box) manipulation
+\RequirePackage{adjustbox}
+
+%tikz for drawings
+\RequirePackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+
+%for € symbol
+\RequirePackage[gen]{eurosym}
+
+%date format and \today command
+\RequirePackage[ddmmyyyy]{datetime}
+
+% all sections where font is unset will get this font
+\allsectionsfont{\normalfont\sffamily\bfseries}
+
+% change hader and footer line size to 0
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% modify table sizes
+\setlength{\tabcolsep}{18pt}
+\renewcommand{\arraystretch}{1.5}
+
+%setup hyperlinks colors
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=blue,
+    citecolor=black,
+    pdftitle={Sharelatex Example},
+    pdfpagemode=FullScreen
+}
+
+% set date separator for \today command ex. 04.03.2020 or 04-03-2020
+\renewcommand{\dateseparator}{.}
+
+% create command for inserting centered images with optional caption and label
+% usage: \centerimage[label]{path}{caption}
+% note: 'caption' can be empty ex. \centerimage{images/1.png}{}
+% note: 'label' is made with 'zdj:' prefix 
+% ex. \centerimage[label]{path}{caption} will create image with label 'zdj:label'
+\newcommand{\centerimage}[3][]{
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[height=0.3\textheight]{#2}
+        \ifx&#3&\@empty
+        \else
+            \caption{#3}
+        \fi
+        \ifx&#1&\@empty
+        \else
+            \label{zdj:#1}
+        \fi
+    \end{figure}
+}
+
+% create command for inserting wide centered images with optional caption and label
+% usage: \centerimagewide[label]{path}{caption}
+% note: 'caption' can be empty ex. \centerimagewide{images/1.png}{}
+% note: label is made with 'zdj:' prefix 
+% ex. \centerimagewide[label]{path}{caption} will create image with label 'zdj:label'
+\newcommand{\centerimagewide}[3][]{
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=0.7\textwidth]{#2}
+        \ifx&#3&\@empty
+        \else
+            \caption{#3}
+        \fi
+        \ifx&#1&\@empty
+        \else
+            \label{zdj:#1}
+        \fi
+    \end{figure}
+}
+
+% macro to speedup italic text
+% usage: \i{text}
+\def\i#1{\textit{#1}}
+
+% macro to speedup bold text
+% usage: \b{text}
+\def\b#1{\textbf{#1}}
+
+% creates copyright sign in center bottom of new page
+% usage: \makecopyright{2020 foo bar}
+\newcommand{\makecopyright}[1]{
+    \newpage
+    \thispagestyle{plain}
+    \pagenumbering{gobble}
+    \vspace*{\fill}
+    \begin{center}
+        \copyright #1
+    \end{center}
+}
