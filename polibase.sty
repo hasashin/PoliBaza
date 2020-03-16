@@ -162,3 +162,27 @@
         \copyright #1
     \end{center}
 }
+
+% define JSON Language syntax colors for lstlisting library
+\lstdefinelanguage{json}{
+    basicstyle=\normalfont\ttfamily,
+
+    % strings are between " chars and has red-brown color
+    morestring=[d]",
+    stringstyle=\color{red!50!brown},
+    showstringspaces=false,
+
+    % digits are literals, and has red-violet colors
+    literate=%
+   *{0}{{{\color{red!20!violet}0}}}1
+    {1}{{{\color{red!20!violet}1}}}1
+    {2}{{{\color{red!20!violet}2}}}1
+    {3}{{{\color{red!20!violet}3}}}1
+    {4}{{{\color{red!20!violet}4}}}1
+    {5}{{{\color{red!20!violet}5}}}1
+    {6}{{{\color{red!20!violet}6}}}1
+    {7}{{{\color{red!20!violet}7}}}1
+    {8}{{{\color{red!20!violet}8}}}1
+    {9}{{{\color{red!20!violet}9}}}1
+    {:}{{{\color{red!20!violet}:}}}1
+}
