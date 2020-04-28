@@ -18,7 +18,7 @@
         \Large\textsc{\faculty}\\
         \normalsize \institute
     \end{center}
-    \vspace{3cm}
+    \vspace{5cm}
     \noindent
     \begin{center}
       \LARGE \@author
@@ -28,7 +28,6 @@
     \begin{center}
         \large Sprawozdanie z zajęć laboratoryjnych:
     \end{center}
-    \vspace{0.4cm}
     \begin{center}
         \Large \textbf{\@title}
     \end{center}
@@ -39,3 +38,36 @@
   \end{titlepage}
 }
 
+\newcommand{\makelogotitle}{
+    \begin{titlepage}
+        \pagestyle{empty}
+        \pagenumbering{gobble}
+        \begin{figure}[ht]
+            \centering
+            \includegraphics{resources/logo.jpg}
+        \end{figure}
+        \vspace{1cm}
+        \begin{center}\small
+            \LARGE\textbf{\MakeUppercase{\univ}}\\
+            \Large\textsc{\faculty}\\
+            \normalsize \institute
+        \end{center}
+        \vspace{4cm}
+        \noindent
+        \begin{center}
+          \LARGE \@author
+        \end{center}
+        \vspace{5cm}
+        \noindent
+        \begin{center}
+            \large Sprawozdanie z zajęć laboratoryjnych:
+        \end{center}
+        \begin{center}
+            \Large \textbf{\@title}
+        \end{center}
+        \vspace*{\stretch{6}}
+        \begin{center}
+            \@date
+        \end{center}
+    \end{titlepage}
+}

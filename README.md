@@ -81,10 +81,12 @@
        Argumenty
         - _tekst_ - tekst, który będzie pokazany za znakiem ©
 4. Tworzy strony tytułowe komendą ``\maketitle``:
-    - dla notatki  - strona tytułowa ma formę nagłówka pierwszej strony oddzielonego linią od tekstu. 
-    Zawiera tytuł, autora i datę
-    - dla sprawozdania - strona tytułowa ma oficjalną formę z nazwą uczelni, wydziału, instytutu oraz danymi
-    autora, tytułem i datą.
+    - __dla notatki__  - strona tytułowa ma formę nagłówka pierwszej strony oddzielonego linią od tekstu. 
+    Zawiera tytuł, autora i datę,
+    - __dla sprawozdania__ - strona tytułowa ma oficjalną formę z nazwą uczelni, wydziału, instytutu oraz danymi
+    autora, tytułem i datą,
+    - __dla sprawozdania z logo uczelni__ - strona tytułowa ma oficjalną formę z logo uczelni na górze strony, nazwą uczelni, wydziału
+    oraz danymi autora, tytułem i datą. Obrazek logo jest umieszczony w folderze __resources__.
 
 ## Instalacja
 
