@@ -80,6 +80,12 @@
 
        Argumenty
         - _tekst_ - tekst, który będzie pokazany za znakiem ©
+    - ``\makelogotitle``
+        
+       Komenda tworzy stronę tytułową podobną w oficjalnej formie z logo uczelni
+
+       Argumanty
+	    brak
 4. Tworzy strony tytułowe komendą ``\maketitle``:
     - __dla notatki__  - strona tytułowa ma formę nagłówka pierwszej strony oddzielonego linią od tekstu. 
     Zawiera tytuł, autora i datę,
