@@ -51,7 +51,7 @@
 % \begin{enumerate}[a)]
 %   \item foo
 % \end{enumerate}
-\RequirePackage{enumerate}
+\RequirePackage{enumitem}
 
 % provides hyperlinks, hyperreferences and urls
 \RequirePackage{hyperref}
@@ -162,3 +162,9 @@
         \copyright #1
     \end{center}
 }
+
+% macros to speedup coloring text with specified color
+% usage: \colorname{text}
+\def\red#1{\color{red}#1\color{black}}
+\def\blue#1{\color{blue}#1\color{black}}
+\def\green#1{\color{green}#1\color{black}}

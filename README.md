@@ -74,6 +74,28 @@
 
        Argumenty
         - _tekst_ - tekst, który będzie pogrubiony
+        
+    - ``\red{tekst}``
+
+       Komenda koloruje tekst na czerwono. Alias zestawu komend: ``\color{red} tekst \color{black}``.
+
+       Argumenty
+        - _tekst_ - tekst, który będzie pokolorowany
+
+    - ``\green{tekst}``
+
+       Komenda koloruje tekst na zielono. Alias zestawu komend: ``\color{green} tekst \color{black}``.
+
+       Argumenty
+        - _tekst_ - tekst, który będzie pokolorowany
+
+    - ``\blue{tekst}``
+
+       Komenda koloruje tekst na niebiesko. Alias zestawu komend: ``\color{blue} tekst \color{black}``.
+
+       Argumenty
+        - _tekst_ - tekst, który będzie pokolorowany
+
     - ``\makecopyright{tekst}``
 
        Komenda tworzy nową stronę z informacją o prawach autorskich na dole strony.
