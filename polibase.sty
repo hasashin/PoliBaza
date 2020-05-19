@@ -1,6 +1,17 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{polibase}[2019/11/11 Kierunkowa paczka do pisania sprawozdań - baza]
 
+\newif\if@minted\@mintedfalse
+\DeclareOption{minted}{
+    % adds code listings support with color
+    % requires python installed with pygment package
+    % and -shell-escape parameter 
+    \@mintedtrue
+}
+
+%end options processing
+\ProcessOptions\relax
+
 % polish language support
 \RequirePackage{polski}
 
@@ -36,6 +47,11 @@
 
 % adds code listings support
 \RequirePackage{listings}
+
+\if@minted
+\RequirePackage{minted}
+\fi
+
 
 % adds coloring suport
 \RequirePackage{xcolor}
@@ -77,6 +93,9 @@
 
 %date format and \today command
 \RequirePackage[ddmmyyyy]{datetime}
+
+%for bookmarks just because
+\RequirePackage{bookmark}
 
 % all sections where font is unset will get this font
 \allsectionsfont{\normalfont\sffamily\bfseries}

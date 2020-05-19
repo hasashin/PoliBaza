@@ -1,7 +1,19 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{polispr}[2019/11/11 Kierunkowa paczka do pisania sprawozdań - styl dla sprawozdania]
 
+
+\newif\if@withminted\@withmintedfalse
+\DeclareOption{withminted}{
+  \@withmintedtrue
+}
+
+\ProcessOptions\relax
+
+\if@withminted
+\RequirePackage[minted]{polibase}
+\else
 \RequirePackage{polibase}
+\fi
 
 % university information
 \def\univ{Politechnika Poznańska}

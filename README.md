@@ -133,3 +133,9 @@ W preambule dokumentu należy dodać odpowiednią paczkę komendą:
 ```latex
 \usepackage{NazwaPaczki}
 ```
+Można opcjonalnie dołączyć paczkę __minted__, za pomocą odpowiedniej opcji _withminded_ w komendzie:
+```latex
+\usepackage[withminted]{NazwaPaczki}
+```
+Paczka _minted_ wymaga zainstalowanego interpretera __Python__ wraz z paczką __pygment__ oraz użycia argumentu ```-shell-escape``` 
+podczas budowania projektu.
