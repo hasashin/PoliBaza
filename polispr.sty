@@ -20,6 +20,9 @@
 \def\faculty{Wydział Informatyki i Telekomunikacji}
 \def\institute{Instytut Informatyki}
 
+% titlepage information
+\def\pretitle{Sprawozdanie z zajęć laboratoryjnych:}
+
 %create titlepage with university name and stuff
 \makeatletter
 \renewcommand{\maketitle}{\begin{titlepage}
@@ -38,7 +41,7 @@
     \vspace{7cm}
     \noindent
     \begin{center}
-        \large Sprawozdanie z zajęć laboratoryjnych:
+        \large \pretitle
     \end{center}
     \begin{center}
         \Large \textbf{\@title}
@@ -72,7 +75,7 @@
         \vspace{5cm}
         \noindent
         \begin{center}
-            \large Sprawozdanie z zajęć laboratoryjnych:
+            \large \pretitle
         \end{center}
         \begin{center}
             \Large \textbf{\@title}
