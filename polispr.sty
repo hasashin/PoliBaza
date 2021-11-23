@@ -7,6 +7,11 @@
   \@withmintedtrue
 }
 
+\newif\if@shorttitle\@shorttitlefalse
+\DeclareOption{short}{
+  \@shorttitletrue
+}
+
 \ProcessOptions\relax
 
 \if@withminted
@@ -21,9 +26,30 @@
 \def\institute{Instytut Informatyki}
 
 % titlepage information
-\def\pretitle{Sprawozdanie z zajęć laboratoryjnych:}
+\def\pretitle{Sprawozdanie z zajęć laboratoryjnych}
 
 %create titlepage with university name and stuff
+\if@shorttitle
+\renewcommand{\maketitle}{
+    \begin{center}
+        \Large \pretitle
+    \end{center}
+    \setlength\tabcolsep{5mm}
+    \begin{table}[ht]
+        \centering
+        \begin{tabular}{|r|p{12cm}|}
+            \hline
+            \textbf{Tytuł} & \@title 
+            \\ \hline
+            \textbf{Data} & \@date 
+            \\ \hline
+            \textbf{Autor} & \@author
+            \\\hline
+        \end{tabular}
+        \vspace{2cm}
+    \end{table}
+}
+\else
 \makeatletter
 \renewcommand{\maketitle}{\begin{titlepage}
     \pagestyle{empty}
@@ -86,3 +112,4 @@
         \end{center}
     \end{titlepage}
 }
+\fi
